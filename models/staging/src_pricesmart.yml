@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: PRICESMART
+    database: RAW
+    schema: PRICESMART
+    tables:
+      - name: CUSTOMERS
+      - name: ORDERS
+      - name: PRODUCT
