@@ -1,13 +1,13 @@
 select
 --from raw_orders
 o.orderid,
-orderdate,
-shipdate, 
-shipmode,
+o.orderdate,
+o.shipdate, 
+o.shipmode,
 o.customerid,
 o.productid,
-ordersellingprice,
-ordercostprice,
+o.ordersellingprice,
+o.ordercostprice,
 --from raw_customer
 customername,
 segment,
