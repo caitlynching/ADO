@@ -1,6 +1,6 @@
 select
 --from raw_orders
-orderid,
+o.orderid,
 orderdate,
 shipdate, 
 shipmode,
