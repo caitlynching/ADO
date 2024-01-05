@@ -16,6 +16,7 @@ country,
 --from raw_product
 category,
 productname,
+subcategory,
 {{ markup() }} as markup, 
 ordersellingprice - ordercostprice as orderprofit
 from {{ ref('raw_orders') }} as o
