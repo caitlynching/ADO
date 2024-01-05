@@ -1,13 +1,14 @@
+{{ config (materialized='view')}}
 select
 --from raw_orders
-orderid,
-orderdate,
-shipdate, 
-shipmode,
+o.orderid,
+o.orderdate,
+o.shipdate, 
+o.shipmode,
 o.customerid,
 o.productid,
-ordersellingprice,
-ordercostprice,
+o.ordersellingprice,
+o.ordercostprice,
 --from raw_customer
 customername,
 segment,
@@ -16,7 +17,7 @@ country,
 category,
 productname,
 subcategory,
-{{ markup() }} as markup, 
+-- {{ markup() }} as markup, 
 ordersellingprice - ordercostprice as orderprofit
 from {{ ref('raw_orders') }} as o
 left join {{ ref('raw_customer') }} as c
