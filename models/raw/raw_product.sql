@@ -1,3 +1,3 @@
 {{ config (materialized='table')}}
 Select *
-from {{ source('PRICESMART', 'ORDERS') }}
+from {{ source('PRICESMART', 'PRODUCT') }}
