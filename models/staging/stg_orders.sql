@@ -1,14 +1,13 @@
---{{ config (materialized='view')}}
 select
 --from raw_orders
-o.orderid,
-o.orderdate,
-o.shipdate, 
-o.shipmode,
+orderid,
+orderdate,
+shipdate, 
+shipmode,
 o.customerid,
 o.productid,
-o.ordersellingprice,
-o.ordercostprice,
+ordersellingprice,
+ordercostprice,
 --from raw_customer
 customername,
 segment,
